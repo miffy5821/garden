@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<body lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript练习</title>
+</head>
+<body>
+</body>
+<ul id="lst">
+    <li>web设计</li>
+    <li>UI设计</li>
+    <li>Java程序</li>
+</ul>
+<ol id="dom">
+    <li>JavaScript框架</li>
+    <li>JavaScript源生</li>
+    <li>JavaScript</li>
+</ol>
+<br>
+<h2>网络游戏排名</h2>
+<ul id="str">
+    <li>英雄联盟</li>
+    <li>魔兽世界</li>
+    <li>DOTA</li>
+    <li>仙剑奇侠传</li>
+    <li>穿越火线</li>
+    <li>梦幻西游</li>
+</ul>
+<br>
+<ul id="animal">
+    <li>Panda</li>
+    <li>Monkey</li>
+    <li>Elephant</li>
+    <li>Giraffe</li>
+</ul>
+<br>
+<div id=div1>第一个元素</div>
+<div id=div2>第二个元素</div>
+<div id=div3>第三个元素</div>
+<script>
+    // while 先判断再循环  do-while先执行再判断
+    /*var i=1;
+    while(i<=100){
+        document.write(i+'<br>');
+        i+=1;
+    }*/
+    /* var j=1;
+     do{
+         if(j%2==0){
+             console.log(j);
+         }
+         j++;
+     } while(j<=10);
+     */
+    /*function add(num1,num2) {
+        var sum = num1 + num2;
+        alert(num1 + '和' + num2 + '的和是' + sum);
+    }
+     add(3,5);
+     add(99,754);
+     add(-5,9);
+     add(9,53);
+     add(-8,-7);
+     console.log(add(3,5));
+     alert(add(99,54));
+     var s=add(-1,-9);
+     console.log(s);*/
+    /*function add(num1,num2){
+        var sum=num1+num2;
+        return sum;
+    }
+    console.log(add(3,5));
+    alert(add(99,789));
+    var s=add(-1,-9);
+    console.log(s);
+    document.write('-1+9='+s)*/
+    /* function myFunction(arg){
+         if(isNaN(arg)) return;
+         return arg*2;
+     }
+     console.log(myFunction(40));*/
+    /*function arg(){
+        console.log(arguments.length);
+        console.log(arguments[1]);
+    }
+    arg(15,8);*/
+    /*function are(num1,num2){
+        arguments[0]=88;
+        console.log(num1); //num1=88
+    }
+    are(55,56);*/
+    /*function ge() {
+        return arguments.length + "和" + arguments[2];
+    }
+
+    console.log(ge(1, 2, 3, 4, 5, 6,));*/
+   /* function add() {
+        console.log(arguments);
+        if (arguments.length == 1) {
+            alert(arguments[0] + 5);
+        } else if (arguments.length === 2) {
+            alert(arguments[0] + arguments[1])
+        }
+    }
+
+    add(1);
+    add(10, 20);*/
+
+      // let result = prompt('请输入密码');
+      // if (isNaN(result)) {
+      //     alert('请输入数字密码');
+      // } else if (result.length < 4) {
+      //     alert('密码不能少于四位数');
+      // }else{
+      //     alert('success!');
+      // }
+
+
+    // function getAvg(){
+    //     var sum=0,len=arguments.length,i;
+    //     for(i=0;i<len;i++){
+    //       //  console.log(arguments[i]);
+    //         sum+=arguments[i];
+    //     }
+    //     console.log(sum);
+    // }
+    //  getAvg(5,66,45,2,55)
+    //  getAvg(6,25,68,95,67)
+
+
+  /* function getAvg(){
+        var sum=0,len=arguments.length,i;
+        for(i=0;i<len;i++){
+            //  console.log(arguments[i]);            sum+=arguments[i];
+        }
+        return sum/len;
+    }
+    var Avg=getAvg(5,66,45,32,45,88,24,88,199,3950);
+    console.log(Avg);*/
+ /* var color=new Array(3);
+   color[0]="red";
+   color[1]="green";
+   color[2]="black";
+   console.log(color);
+  var nums=new Array(1,5,7,6);
+   console.log(nums);
+   var sllor=["红楼梦","三国演义","水浒传","西游记"];
+   console.log(sllor);
+   console.log(sllor[1]);
+   var infor=[3,"amy",true,{email:"amy@qq.com"}];
+   console.log(infor);
+
+   //使用split将str转化为数组
+    var str="welcome-to-beijing";
+    var ArrayStr=str.split("-");
+    console.log(ArrayStr);
+    // replace 替换
+    var date="2019-11-10";
+    var ArrayDate=date.replace("-"," ");
+    console.log(ArrayDate);
+    //获取扩展名 获取URL的扩展名
+    var url="https://www.nodoor.comchenc7749@gmail.com";
+    function getUrlName(url){
+        var pos=url.lastIndexOf(".");
+        return url.substr(pos);
+    }
+    var posUrlName=getUrlName(url);
+    var picForName=getUrlName("12457.jpg");
+    console.log(posUrlName);
+    console.log(picForName);
+
+    //截取子字符串
+
+    var season="holle world";
+    alert(season.slice(6)); //slice第一个参数代表开始位置,第二个参数代表结束位置的下一个位置,截取出来的字符串的长度为第二个参数与第一个参数之间的差;若参数值为负数,则将该值加上字符串长度后转为正值;若第一个参数等于大于第二个参数,则返回空字符串.
+    alert(season.substr(6,10));   //substr第一个参数代表开始位置,第二个参数代表截取的长度
+    alert(season.substring(-4,5));//substring第一个参数代表开始位置,第二个参数代表结束位置的下一个位置;若参数值为负数,则将该值转为0;两个参数中,取较小值作为开始位置,截取出来的字符串的长度为较大值与较小值之间的差
+*/
+  /*  let text="JavaScript 是属于网络的脚本语言！" +
+        "JavaScript 被数百万计的网页用来改进设计、验证表单、检测浏览器、创建cookies，" +
+        "以及更多的应用。JavaScript 是因特网上最流行的脚本语言。JavaScript很容易使用！你一定会喜欢它的！";
+    let  indexArray=[];
+    for (let i=0;i<text.length;i++){
+        if(text[i]==="J"){
+            let str=text.substr(i,10);
+            console.log(str);
+            if(str.indexOf("JavaScript")!==-1){
+                indexArray.push(i);
+            }
+        }
+    }
+    for (let index=0;index<indexArray.length;index++){
+        console.log("JavaScript第"+index+"次出现在"+indexArray[index]+"的位置");
+    }
+    console.log("JavaScript在这段话中出现了"+indexArray.length+"次");
+
+
+  //  var result=prompt("请输入你喜欢的字段");*/
+
+ /*   var str="Work hard, earn money.";
+    var strKey=str.indexOf("a");
+    console.log(strKey);
+    document.write(str.charCodeAt(strKey));*/
+  /*  var str="a/b/c/d/e/f/g/h";
+    var arr=str.split("/") ;
+    var strNew=str.split(arr);
+    document.write(arr);
+    document.write("<br/>");
+    document.write(strNew);*/
+
+//  var str="holle my name is amy！welcome to beijing!";
+//  console.log(str.toUpperCase());
+
+
+/*    let result=prompt("JavaScript 是属于网络的脚本语言！JavaScript 被数百万计的网页用来改进设计、验证表单、检测浏览器、" +
+        "创建cookies，以及更多的应用。JavaScript 是因特网上最流行的脚本语言。JavaScript很容易使用！你一定会喜欢它的！" );
+
+    let indexArray=[];
+    for (let i=0;i<result.length;i++){
+        if(letresult[i]==="J"){
+            let str=result.substr(i,10);
+    console.log(str);
+    if(str.indexOf("JavaScript")!==-1){
+        indexArray.push(i);
+    }
+    }
+    }
+    for (let index=0;index<indexArray.length;index++){
+        console.log("JavaScript第"+index+"次出现在"+
+            indexArray[index]+"的位置中");
+    }
+    console.log("JavaScript在文章中总共出现了"+indexArray.length+"次");*/
+
+
+   // var arr=["he","got","home","so","late"];
+  /*  function camelback(str){
+        var arr=str.split("-"),newStr=arr[0]; //["he","got","home","so","late"]
+        for (var i=1,len=arr.length;i<len;i++){
+             var word=arr[i];
+             console.log(word);
+             newStr+=word.charAt(0).toUpperCase()+word.substr(1);
+             console.log(newStr);
+        }
+        return newStr;
+    }
+   var cameFormat=camelback("he-got-home-so-late");
+ //   var cameFormat=camelback("I-like-linz");
+    console.log(cameFormat);*/
+ /*   var str="Never deter till tomorrow that which you can do today";
+    var index=str.substr(17,8);//补充代码
+    console.log(index);
+   // var strNew=index.charAt(3);//补充代码
+    var upperStr=index.toUpperCase();//补充代码
+    document.write(upperStr);*/
+
+ /*   var str= "If you would have a thing well done,do it yourself";
+    var strUpper=str.toUpperCase();//补充代码
+    document.write(strUpper);
+    document.write("<br/>");
+    var strLower=strUpper.toLowerCase();//补充代码
+    document.write(strLower);*/
+
+ // 求Math的最大值和最小值
+  /*  var min=Math.min(88.1,54,-5,-17,26,58);
+    max=Math.max(95,4.5,-89,47,50,376);
+    console.log(min);
+    console.log(max);
+   //求Math整数 ceil 取小数点前的整数+1
+   // var num=(188.95);
+    var num=Math.ceil(189.64);
+    console.log(Math.ceil(num));
+    //求Math整数 floor 只取整数，忽略小数点后面的数值
+    var nums=Math.floor(178.94525);
+    console.log(nums);
+    //求Math整数 round 整数后面的小数点的数值四舍五入
+    var s=Math.round(123.53);
+    var z=Math.round(123.29);
+    console.log(s);
+    console.log(z);
+    //Math.abs(x) 返回 x 的绝对（正）值
+    var str=Math.abs(-14.64);
+    console.log(str);
+
+    //求随机整数
+    var random=Math.random();
+    console.log(random);
+    function getRandom(n,m){
+        var choise=m-n+1;
+        return Math.floor(Math.random()*choise+n);
+    }
+       var random1=getRandom(2,8);
+       var random2=getRandom(1,100);
+       console.log(random1);
+
+    var less=Math.random();
+    console.log(less);
+    function forRandom(a,b){
+        var ness=b-a;
+        return Math.ceil(Math.random()*ness);
+    }
+    var random3=forRandom(5,15);
+    console.log(random3);*/
+  var weeks=["日","一","二","三","四","五","六"],
+   today=new Date(),
+   year=today.getFullYear(),
+   month=today.getMonth()+1,
+   day=today.getDate(),
+   week=today.getDay(),
+   hours=today.getHours(),
+   minutes=today.getMinutes(),
+   seconds=today.getSeconds(),
+   time=year+'年'+month+'月'+day+'日'+hours+'时'+minutes+'分'+seconds+'秒 星期'+weeks[week];
+   document.write('现在是:'+time);
+
+ var  lts=document.getElementsByTagName("li");
+ console.log(lts.length);
+ var lis1=document.getElementById("dom").getElementsByTagName("li");
+ console.log(lis1.length);
+ console.log(lis1[2]);
+ console.log(lis1);
+/*   var str="all time is no time when it is past";
+    function forstr(arr){
+    var newstr=str.split(" "),result="";
+    console.log(newstr);
+
+   for ( var i = 0, len = newstr.length;i<len;i++){
+         var word=newstr[i];
+       result += word.charAt(0).toUpperCase()+word.slice(1)+" ";
+        }
+        return result;
+    }
+
+    console.log(forstr());*/
+
+  /*  var arr = "all time is no time when it is past";
+    function camelback(str) {
+        var newStr = arr.split(' '), result = '';
+        console.log(newStr);
+        for (var i = 0, len = newStr.length; i < len; i++) {
+            var word = newStr[i];
+            result += word.charAt(0).toUpperCase() + word.substr(1) + ' ';
+        }
+        return result;
+    };
+    console.log(camelback());*/
+  /*  var str="all time is no time when it is past";
+    var result="";
+    function getFull(arr){
+        var newstr=str.split(" ");
+        console.log(newstr);
+        for (var i=0,len=newstr.length;i<len;i++) {
+            word=newstr[i];
+            result+=word.charAt(0).toUpperCase()+word.substring(1)+" ";
+        }
+        return result;
+    }
+    var forMat=getFull(result);
+    document.write(forMat);*/
+    var lis=document.getElementById("str").getElementsByTagName("li");
+    for(var i=0,len=lis.length;i<len;i++){
+        if(i%2 === 0){
+            lis[i].style.backgroundColor="pink";
+    	        lis[i].style.color="purple";
+        }
+        else{
+            lis[i].style.backgroundColor="orange";
+    	        lis[i].style.color="yellow";
+            lis[i].style.listStyle="none";
+        }
+    }
+
+    var lis1=document.getElementById("animal").getElementsByTagName("li");
+    for (var i=0,len=lis1.length;i<len;i++){
+        console.log(lis1[i].innerHTML+" ");
+        lis1[i].style.listStyle="none";
+        lis1[i].style.color="orange";
+        lis1[i].style.fontSize="2em";
+        lis1[i].innerHTML=lis1[i].innerHTML+' is a very cute animal.';
+    }
+
+    var a=document.getElementById("div1");
+    b=document.getElementById("div2");
+    c=document.getElementById("div3");
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    alert(a);
+    alert(b);
+    alert(c);
+</script>
+</body>
+</html>
